@@ -6,6 +6,10 @@ import img2 from './img/img 22.jpg';
 import img4 from './img/img 4.jpg'
 import Navabar from './navabar';
 import Header from './Header';
+import ReactStars from "react-rating-stars-component"
+
+
+
 
 
 
@@ -13,7 +17,9 @@ function Newcard(props) {
 
     const [cart, SetCart] = useState(0);
 
-
+// const ratingStyle = {
+     
+// }
 const    change = ()=>{
     SetCart(0)
  }
@@ -45,7 +51,11 @@ const    change = ()=>{
                             <img src={img2} className="card-img-top  img-fulid" alt="..." style={{ width: "14rem", height: "12rem" }} />
                             <div className='card-body' style={{ textAlign: "center" }}>
                                 <h5 className="card-title">HP laptop</h5>
-                                <p>⭐⭐⭐⭐</p>
+                                
+                                <ReactStars  class="d-flex align-items-md-center"  isHalf={true} size ={25}count={5} ></ReactStars>
+                                
+                                
+                              
                                 <p><s>$100.00</s> - $80.00</p>
                                 <button type="button " onClick={() => SetCart(cart + 1)} className='btn btn-dark'>Add cart</button>
                             </div>
@@ -68,7 +78,7 @@ const    change = ()=>{
                             <img src={img4} className="card-img-top  img-fulid" alt="..." style={{ width: "15rem", height: "12rem" }} />
                             <div className='card-body' style={{ textAlign: "center" }}>
                                 <h5 className="card-title">Lenovo</h5>
-                                <p>⭐⭐⭐⭐⭐</p>
+                                 <ReactStars    isHalf={true} size ={25}count={5}/>
                                 <p><s>$80.00</s> - $60.00</p>
                                 <button type="button " onClick={() => SetCart(cart + 1)} className='btn btn-dark'>Add cart </button>
                             </div>
@@ -84,7 +94,7 @@ const    change = ()=>{
                             <img src={img4} className="card-img-top  img-fulid" alt="..." style={{ width: "15rem", height: "12rem" }} />
                             <div className='card-body' style={{ textAlign: "center" }}>
                                 <h5 className="card-title">Lenovo</h5>
-                                <p>⭐⭐⭐⭐⭐</p>
+                                 <ReactStars    style={{ textAlign: "center" }}  isHalf={true} size ={25}count={5}/>
                                 <p><s>$80.00</s> - $60.00</p>
                                 <button type="button " onClick={() => SetCart(cart + 1)} className='btn btn-dark'>Add cart </button>
                             </div>
@@ -109,7 +119,7 @@ const    change = ()=>{
                             <img src={img2} className="card-img-top  img-fulid" alt="..." style={{ width: "14rem", height: "12rem" }} />
                             <div className='card-body' style={{ textAlign: "center" }}>
                                 <h5 className="card-title">HP laptop</h5>
-                                <p>⭐⭐⭐⭐</p>
+                                 <ReactStars    isHalf={true} size ={23}count={5}/>
                                 <p><s>$100.00</s> - $80.00</p>
                                 <button type="button "  className='btn btn-dark'>view option</button>
                             </div>
